@@ -2,14 +2,14 @@ import 'dotenv/config';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import cors from 'cors';
-import connectDB from './configs/db.js';
-import userRouter from './routes/UserRoute.js';
-import sellerRouter from './routes/sellerRoute.js';
-import connectCloudinary from './configs/cloudinary.js';
-import productRouter from './routes/productRoute.js';
-import cartRouter from './routes/cartRoute.js';
-import addressRouter from './routes/addressRouter.js';
-import orderRouter from './routes/orderRoute.js';
+import connectDB from './src/db/db.js';
+import userRouter from './src/routes/userRoute.js';
+import sellerRouter from './src/routes/sellerRoute.js';
+import connectCloudinary from './src/services/cloudinary.js';
+import productRouter from './src/routes/productRoute.js';
+import cartRouter from './src/routes/cartRoute.js';
+import addressRouter from './src/routes/addressRouter.js';
+import orderRouter from './src/routes/orderRoute.js';
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -17,7 +17,7 @@ const port = process.env.PORT || 4000;
 await connectDB()
 await connectCloudinary()
 
-const allowedOrigins = ['http://localhost:5173', 'https://greencart-henna.vercel.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://greencart-henna.vercel.'];
 
 app.use(cors({
     origin: allowedOrigins,

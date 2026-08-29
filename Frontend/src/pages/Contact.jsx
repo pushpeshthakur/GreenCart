@@ -16,7 +16,7 @@ const Contact = () => {
       <form 
         target="_blank" 
         method="POST"
-        action="https://api.web3forms.com/submit"
+        action="#"
         className="max-w-2xl mx-auto space-y-6"
       >
         <input type="hidden" name="access_key" value="098668d0-f71b-4b9c-89f2-ef6f98256198" />
@@ -51,7 +51,7 @@ const Contact = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="block mx-auto flex items-center gap-2 justify-center bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300 cursor-pointer"
+          className=" mx-auto flex items-center gap-2 justify-center bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300 cursor-pointer"
         >
           Submit now
           <img src={assets.white_arrow_icon} className="w-4" alt="arrow" />

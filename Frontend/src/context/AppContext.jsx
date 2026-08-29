@@ -1,7 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { useEffect } from "react";
-import { createContext, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { assets, dummyProducts } from "../assets/assets";
+//import { assets, dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -33,6 +34,7 @@ export const AppContextProvider = ({ children }) => {
                 setIsSeller(false)
             }
         } catch (error) {
+            console.error(error)
             setIsSeller(false)
         }
     }
@@ -46,6 +48,7 @@ export const AppContextProvider = ({ children }) => {
             }
 
         } catch (error) {
+            console.error(error)
             setUser(null);
         }
     };
@@ -133,7 +136,7 @@ export const AppContextProvider = ({ children }) => {
         if (user) {
             updateCart();
         }
-    }, [cartItems]);
+    }, );
 
     // Clear cart when user logs out
     useEffect(() => {

@@ -8,8 +8,8 @@ This project demonstrates not only the technical depth of full-stack development
 
 ## 🌐 Live Demo
 
-🔗 [Frontend Live Link](https://your-vercel-link.com)  
-📂 [GitHub Repository](https://github.com/shribhagwan7/greencart)
+🔗 [Frontend Live Link] 
+📂 [GitHub Repository]
 
 ## 🔧 Tech Stack
 
@@ -82,7 +82,7 @@ During this project, I enhanced my skills in:
 ### Installation (Frontend)
 
 ```bash
-git clone https://github.com/shribhagwan7/greencart.git
+git clone 
 cd greencart
 npm install
 npm run dev
@@ -103,6 +103,5 @@ Feel free to fork the repo, open an issue, or submit a pull request.
    - LinkedIn & email
    - Add screenshots (optional but recommended)
 
-If you want, I can also create a **downloadable `README.md` file** with all links and formatting done. Want me to do that?
 
 Thank You all of you...
