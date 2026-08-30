@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: allowedOrigins,
+    origin: 'https://green-cart-omega-ten.vercel.app/',
     credentials: true
 }));
 
