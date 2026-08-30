@@ -86,10 +86,16 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {open && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 flex flex-col gap-4 text-sm z-50 border-t border-gray-200 md:hidden">
+                    <NavLink to='/seller' className="px-4 py-1 border border-gray-300 rounded-full text-xs hover:bg-primary/10 transition">Seller Dashboard</NavLink>
                     <NavLink to='/' onClick={() => setOpen(false)} className="hover:text-primary">Home</NavLink>
                     <NavLink to='/products' onClick={() => setOpen(false)} className="hover:text-primary">All Products</NavLink>
                     {user && <NavLink to='/my-orders' onClick={() => setOpen(false)} className="hover:text-primary">My Orders</NavLink>}
                     <NavLink to='/contact' onClick={() => setOpen(false)} className="hover:text-primary">Contact</NavLink>
+
+                    <div className="hidden max-sm:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
+                    <input onChange={(e) => setSearchQuery(e.target.value)} className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
+                    <img src={assets.search_icon} alt='search' className='w-4 h-4' />
+                    </div>
 
                     {!user ? (
                         <button

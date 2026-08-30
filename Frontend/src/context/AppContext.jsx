@@ -22,7 +22,7 @@ export const AppContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
 
     const [cartItems, setCartItems] = useState({});
-    const [searchQuery, setSearchQuery] = useState({});
+    const [searchQuery, setSearchQuery] = useState("");
 
     // Fetch Seller Status
     const fetchSeller = async () => {
@@ -136,7 +136,7 @@ export const AppContextProvider = ({ children }) => {
         if (user) {
             updateCart();
         }
-    }, );
+    }, [cartItems, user]);
 
     // Clear cart when user logs out
     useEffect(() => {
