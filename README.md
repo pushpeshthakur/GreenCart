@@ -1,76 +1,69 @@
-# 🛒 GreenCart – Full Stack E-commerce Web Application
+# 🛒 GreenCart - Full stack web application
 
-GreenCart is a fully functional e-commerce platform built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It provides a seamless and realistic online shopping experience, including product browsing, cart management, address handling, and secure order placement.
-
-This project demonstrates not only the technical depth of full-stack development but also a strong focus on user experience, responsive design, and scalable architecture.
-
----
+GreenCart is a full-stack grocery e-commerce application built with the MERN stack. The application provides customer shopping features and a separate seller dashboard for managing products, stock, and orders.
 
 ## 🌐 Live Demo
 
-🔗 [Frontend Live Link] 
-📂 [GitHub Repository]
+🔗 [Frontend Live Link] - 
+📂 [GitHub Repository] - 
 
-## 🔧 Tech Stack
+Linkedin - 
+Email - 
 
-### 🖥️ Frontend
-- React.js  
-- Tailwind CSS  
-- React Router DOM  
-- React Context API
+## ✨ Features
 
-### ⚙️ Backend
-- Node.js  
-- Express.js  
-- MongoDB (Mongoose ODM)
+### Customer :-
 
-### ☁️ Deployment
-- Vercel (Frontend)  
-- *(Backend can be deployed on Vercel/Render/Other platforms if applicable)*
+- User registration and login
+- JWT authentication with HTTP-only cookies
+- Browse all products
+- Browse products by category
+- View product details
+- Add, update, and remove cart items
+- Manage delivery addresses
+- Place Cash on Delivery orders
+- View previous orders
+- Responsive React UI
 
----
+### Seller :-
 
-## 🚀 Key Features
+- Separate seller login
+- Seller authentication using cookies
+- Add products with multiple images
+- Upload product images through Cloudinary
+- View product list
+- Change product stock status
+- View customer orders
 
-- 🛍️ Product listing with real-time cart updates  
-- 🛒 Add to Cart functionality with backend syncing  
-- 📦 Address form with input validation and editing  
-- 💳 Order placement with Cash on Delivery & Online Payment  
-- 🔄 Session-based cart persistence (not using localStorage)  
-- ✨ Shimmer loading effect for better user experience  
-- 📱 Mobile-first responsive UI across all devices  
+## 🧰 Tech Stack
 
----
+### Frontend
+- React 19
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- React Hot Toast
+- Context API
 
-## 📁 Project Structure
-greencart/
-├── src/
-│ ├── assets/ # Images, dummy data
-│ ├── components/ # Reusable UI components
-│ ├── context/ # App-wide state management (React Context)
-│ ├── pages/ # Main page components (Home, Cart, Orders, etc.)
-│ ├── utils/ # Utility functions/constants
-│ └── App.js # Root component
-└── ...
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- Cookie Parser
+- CORS
+- Multer
+- Cloudinary
 
-## 📚 Learning Highlights
+### Deployment / Services
 
-During this project, I enhanced my skills in:
-
-- 🔧 Building scalable frontend architecture using React and Tailwind  
-- 📡 Creating and integrating REST APIs with Express & MongoDB  
-- 🧠 Managing global state using React Context API  
-- 🔐 Implementing session-based authentication and cart persistence  
-- 🎨 Designing user-friendly interfaces with responsive layouts  
-- ⚙️ Handling asynchronous data loading with shimmer effects
-
----
-
-## 📸 Screenshots
-
-> *(Add your screenshots here — you can upload images to GitHub Issues and paste the image URL here)*
-
----
+- Vercel — frontend deployment
+- Render — backend deployment
+- MongoDB Atlas — database
+- Cloudinary — product image storage
 
 ## ▶️ Getting Started
 
@@ -86,13 +79,208 @@ git clone
 cd greencart
 npm install
 npm run dev
+```
 
-🤝 Contribution & Feedback
-I built GreenCart as a personal project to strengthen my full-stack skills and replicate a real-world online store experience. I’m open to suggestions, improvements, and collaborations!
+## 📁 Project Architecture
 
-Feel free to fork the repo, open an issue, or submit a pull request.
+Greencart/
+│
+├── Backend/
+│   ├── src/
+│   │   ├── controllers/       # Business logic for API requests
+│   │   │   ├── UserController.js
+│   │   │   ├── sellerController.js
+│   │   │   ├── productController.js
+│   │   │   ├── cartController.js
+│   │   │   ├── addressController.js
+│   │   │   └── orderController.js
+│   │   │
+│   │   ├── db/                # MongoDB connection
+│   │   │   └── db.js
+│   │   │
+│   │   ├── middlewares/       # Authentication middleware
+│   │   │   ├── authUser.js
+│   │   │   └── authSeller.js
+│   │   │
+│   │   ├── models/            # Mongoose schemas/models
+│   │   │   ├── User.js
+│   │   │   ├── Product.js
+│   │   │   ├── Address.js
+│   │   │   └── Order.js
+│   │   │
+│   │   ├── routes/            # REST API routes
+│   │   │   ├── userRoute.js
+│   │   │   ├── sellerRoute.js
+│   │   │   ├── productRoute.js
+│   │   │   ├── cartRoute.js
+│   │   │   ├── addressRouter.js
+│   │   │   └── orderRoute.js
+│   │   │
+│   │   └── services/          # External/file services
+│   │       ├── cloudinary.js
+│   │       └── multer.js
+│   │
+│   ├── app.js 
+│   ├── server.js               # Backend entry point
+│   ├── package.json
+│   └── vercel.json
+│
+├── Frontend/
+│   ├── public/                 # Public static files
+│   ├── src/
+│   │   ├── assets/             # Product images, icons and UI assets
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── seller/ SellerLogin.jsx
+│   │   │   ├── BestSeller.jsx
+│   │   │   ├── BottomBanner.jsx
+│   │   │   ├── Categories.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── MainBanner.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── NewsLatter.jsx
+│   │   │   └── ProductCard.jsx
+│   │   │
+│   │   ├── context/
+│   │   │   └── AppContext.jsx  # Global application state
+│   │   │
+│   │   ├── pages/              # Customer and seller pages
+│   │   │   ├── Seller/
+│   │   │   │   ├── SellerLayout.jsx
+│   │   │   │   ├── AddProduct.jsx
+│   │   │   │   ├── ProductList.jsx
+│   │   │   │   └── Orders.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── AllProducts.jsx
+│   │   │   ├── ProductCategory.jsx
+│   │   │   ├── ProductDetails.jsx
+│   │   │   ├── Cart.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   ├── AddAddress.jsx
+│   │   │   └── MyOrders.jsx
+│   │   │
+│   │   ├── App.jsx             # Application routes
+│   │   ├── main.jsx            # React entry point
+│   │   └── index.css           # Global styles
+│   │
+│   ├── package.json
+│   ├── vite.config.js
+│   └── vercel.json
+│
+├── .gitignore
+└── README.md
 
-📄 License
+## 🔄 Application Flow
+
+### 🔌 Backend Request Flow
+
+React Component
+      ↓
+Axios Request
+      ↓
+Express Route
+      ↓
+Authentication Middleware (when required)
+      ↓
+Controller
+      ↓
+Mongoose Model
+      ↓
+MongoDB
+      ↓
+JSON Response
+      ↓
+React State / UI
+
+## 🔐 Authentication Architecture
+
+- GreenCart uses JWT authentication stored in HTTP-only cookies.
+
+### User authentication
+
+Register / Login
+      ↓
+Validate credentials
+      ↓
+Hash / compare password with bcryptjs
+      ↓
+Generate JWT
+      ↓
+Store JWT in HTTP-only cookie
+      ↓
+Protected request
+      ↓
+authUser middleware verifies JWT
+      ↓
+Controller executes
+
+### Seller authentication 
+
+Seller authentication follows the same general pattern through the separate authSeller middleware and seller authentication controller.
+
+## 🌐 API Structure
+
+- All APIs are served under /api.
+
+### User
+
+Method          Endpoint                        Purpose
+
+POST           /api/user/register               Register a user
+
+POST           /api/user/login                  Login a user
+
+GET            /api/user/is-auth                Check user authentication
+
+GET            /api/user/logout                 Logout user
+
+### Seller
+
+Method         Endpoint                         Purpose
+
+POST           /api/seller/login                Seller login
+
+GET            /api/seller/is-auth              Check seller authentication
+
+GET            /api/seller/logout               Logout seller
+
+### Products
+
+Method         Endpoint                         Purpose
+
+POST           /api/product/add                 Add a product
+
+GET            /api/product/list                Get all products
+
+GET            /api/product/id                  Get product by ID
+
+POST           /api/product/stock               Change product stock
+
+### Cart
+
+Method         Endpoint                         Purpose
+
+POST           /api/cart/update                 Update user cart
+
+### Address
+
+Method         Endpoint                         Purpose
+
+POST           /api/address/add                 Add delivery address
+
+GET            /api/address/get                 Get user addresses
+
+### Orders
+
+Method         Endpoint                         Purpose
+
+POST           /api/order/cod                   Place Cash on Delivery order
+
+GET            /api/order/user                  Get user's orders
+
+GET            /api/order/seller                Get all seller orders
+
+## 📄 License
 
 ### ✅ How to Use:
 1. Copy this entire content.
