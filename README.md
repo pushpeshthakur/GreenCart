@@ -4,11 +4,11 @@ GreenCart is a full-stack grocery e-commerce application built with the MERN sta
 
 ## 🌐 Live Demo
 
-🔗 [Frontend Live Link] - 
-📂 [GitHub Repository] - 
+🔗 [Frontend Live Link] - 'https://green-cart-omega-ten.vercel.app'
+📂 [GitHub Repository] -  'https://github.com/pushpeshthakur/GreenCart'
 
-Linkedin - 
-Email - 
+Linkedin - https://www.linkedin.com/in/pushpeshthakur
+Email - pushpeshthakur1626@gmail.com
 
 ## ✨ Features
 
